@@ -1,0 +1,308 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-ab12-c345d6e7f8g9",
+  "title": "La Tilde",
+  "mindmap": {
+    "root": {
+      "id": "root",
+      "parentId": null,
+      "text": {
+        "caption": "La Tilde",
+        "font": {
+          "style": "normal",
+          "weight": "bold",
+          "decoration": "none",
+          "size": 20,
+          "color": "#000000"
+        }
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "foldChildren": false,
+      "branchColor": "#000000",
+      "children": [
+        {
+          "id": "def12345-6789-abcd-ef01-23456789abcd",
+          "parentId": "root",
+          "text": {
+            "caption": "¿Qué es la tilde?",
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "decoration": "none",
+              "size": 15,
+              "color": "#000000"
+            }
+          },
+          "offset": {
+            "x": 200,
+            "y": -50
+          },
+          "foldChildren": false,
+          "branchColor": "#1f77b4",
+          "children": [
+            {
+              "id": "ghijk123-4567-89ab-cdef-0123456789ab",
+              "parentId": "def12345-6789-abcd-ef01-23456789abcd",
+              "text": {
+                "caption": "¿Qué es?",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 15,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 100,
+                "y": 50
+              },
+              "foldChildren": false,
+              "branchColor": "#ff7f0e",
+              "children": [
+                {
+                  "id": "lmnop123-4567-89ab-cdef-0123456789cd",
+                  "parentId": "ghijk123-4567-89ab-cdef-0123456789ab",
+                  "text": {
+                    "caption": "Un símbolo que va sobre algunas letras.",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 15,
+                      "color": "#000000"
+                    }
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 50
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#2ca02c",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "qrstu123-4567-89ab-cdef-0123456789ef",
+              "parentId": "def12345-6789-abcd-ef01-23456789abcd",
+              "text": {
+                "caption": "¿Para qué sirve?",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 15,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 300,
+                "y": 50
+              },
+              "foldChildren": false,
+              "branchColor": "#d62728",
+              "children": [
+                {
+                  "id": "tuvwx123-4567-89ab-cdef-0123456789ab",
+                  "parentId": "qrstu123-4567-89ab-cdef-0123456789ef",
+                  "text": {
+                    "caption": "Indica la pronunciación correcta y diferencia palabras.",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 15,
+                      "color": "#000000"
+                    }
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 50
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#9467bd",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zxycba987-6543-21fe-dcba-9876543210ab",
+          "parentId": "root",
+          "text": {
+            "caption": "Reglas de uso",
+            "font": {
+              "style": "normal",
+              "weight": "bold",
+              "decoration": "none",
+              "size": 15,
+              "color": "#000000"
+            }
+          },
+          "offset": {
+            "x": -200,
+            "y": 50
+          },
+          "foldChildren": false,
+          "branchColor": "#e377c2",
+          "children": [
+            {
+              "id": "fghijk098-7654-32fe-dcba-0987654321bc",
+              "parentId": "zxycba987-6543-21fe-dcba-9876543210ab",
+              "text": {
+                "caption": "Letras que llevan tilde:",
+                "font": {
+                  "style": "normal",
+                  "weight": "bold",
+                  "decoration": "none",
+                  "size": 14,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 100,
+                "y": 30
+              },
+              "foldChildren": false,
+              "branchColor": "#bcbd22",
+              "children": [
+                {
+                  "id": "klmno123-4567-89ab-cdef-0123456789fd",
+                  "parentId": "fghijk098-7654-32fe-dcba-0987654321bc",
+                  "text": {
+                    "caption": "Palabras interrogativas (¿Qué?, ¿Cómo?, ¿Por qué?)",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 14,
+                      "color": "#000000"
+                    }
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 20
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#17becf",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "pqrst123-4567-89ab-cdef-0123456789fa",
+              "parentId": "zxycba987-6543-21fe-dcba-9876543210ab",
+              "text": {
+                "caption": "Palabras agudas, graves y esdrújulas.",
+                "font": {
+                  "style": "normal",
+                  "weight": "bold",
+                  "decoration": "none",
+                  "size": 14,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 100,
+                "y": 80
+              },
+              "foldChildren": false,
+              "branchColor": "#bcbd22",
+              "children": [
+                {
+                  "id": "uvwxyz123-4567-89ab-cdef-0123456789fb",
+                  "parentId": "pqrst123-4567-89ab-cdef-0123456789fa",
+                  "text": {
+                    "caption": "Palabras con tilde en la sílaba tónica (ej. corazón).",
+                    "font": {
+                      "style": "normal",
+                      "weight": "normal",
+                      "decoration": "none",
+                      "size": 14,
+                      "color": "#000000"
+                    }
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 20
+                  },
+                  "foldChildren": false,
+                  "branchColor": "#7f7f7f",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lmno987-6543-21fe-dcba-9876543210bd",
+          "parentId": "root",
+          "text": {
+            "caption": "Ejemplos",
+            "font": {
+              "style": "normal",
+              "weight": "bold",
+              "decoration": "none",
+              "size": 15,
+              "color": "#000000"
+            }
+          },
+          "offset": {
+            "x": 0,
+            "y": 150
+          },
+          "foldChildren": false,
+          "branchColor": "#ff7f0e",
+          "children": [
+            {
+              "id": "pqrs123-4567-89ab-cdef-0123456789gh",
+              "parentId": "lmno987-6543-21fe-dcba-9876543210bd",
+              "text": {
+                "caption": "Ejemplo con tilde: corazón",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 14,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 50,
+                "y": 20
+              },
+              "foldChildren": false,
+              "branchColor": "#e377c2",
+              "children": []
+            },
+            {
+              "id": "tuvwxy1-2345-67ab-89cd-0123456789ij",
+              "parentId": "lmno987-6543-21fe-dcba-9876543210bd",
+              "text": {
+                "caption": "Ejemplo sin tilde: casa",
+                "font": {
+                  "style": "normal",
+                  "weight": "normal",
+                  "decoration": "none",
+                  "size": 14,
+                  "color": "#000000"
+                }
+              },
+              "offset": {
+                "x": 50,
+                "y": 60
+              },
+              "foldChildren": false,
+              "branchColor": "#e377c2",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

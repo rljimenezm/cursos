@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Las Leyes de Newton</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!--
+    Plan de Narrativa y Estructura:
+    1.  Encabezado: Título principal sobre las Leyes de Newton.
+    2.  Introducción: Breve descripción de la importancia de las leyes.
+    3.  Sección 1 (Ley de Inercia): Definición, concepto clave y una visualización HTML/CSS del ejemplo del coche.
+    4.  Sección 2 (Ley de Dinámica): Definición, fórmula F=ma y un gráfico de barras (Chart.js) comparando la fuerza necesaria para mover un carrito vacío vs. uno lleno.
+    5.  Sección 3 (Ley de Acción y Reacción): Definición, concepto y un diagrama HTML/CSS del ejemplo del salto.
+    6.  Conclusión: Resumen del impacto fundamental de estas leyes.
+
+    Selección de Visualizaciones:
+    -   Punto de Datos: Concepto de Inercia.
+        -   Objetivo: Organizar/Informar.
+        -   Visualización: Diagrama de proceso simple.
+        -   Justificación/Método: Un diagrama con HTML/CSS es ideal para mostrar la secuencia de causa y efecto del ejemplo. NO se usa SVG.
+    -   Punto de Datos: Relación Fuerza-Masa (F=ma).
+        -   Objetivo: Comparar.
+        -   Visualización: Gráfico de Barras.
+        -   Justificación/Método: Un gráfico de barras de Chart.js/Canvas compara eficazmente la fuerza requerida para dos masas diferentes, ilustrando la ley. NO se usa SVG.
+    -   Punto de Datos: Concepto de Acción-Reacción.
+        -   Objetivo: Mostrar Relaciones.
+        -   Visualización: Diagrama de fuerzas opuestas.
+        -   Justificación/Método: Un diagrama con flechas opuestas hecho con HTML/CSS muestra claramente el par de fuerzas. NO se usa SVG.
+
+    Paleta de Colores Seleccionada: Brilliant Blues (#003f5c, #7a5195, #ef5675, #ffa600).
+
+    Confirmación: Ni Mermaid JS ni SVG fueron utilizados en la generación de este artefacto.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #003f5c;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .force-arrow {
+            position: relative;
+            padding: 10px;
+            text-align: center;
+        }
+        .force-arrow::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+        }
+        .arrow-down::after {
+            bottom: -15px;
+            border-top: 20px solid #ef5675;
+        }
+        .arrow-up::after {
+            top: -15px;
+            border-bottom: 20px solid #ffa600;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider">Las Leyes de <span class="text-[#ffa600]">Newton</span></h1>
+            <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">Los tres principios fundamentales de la mecánica clásica que rigen el movimiento de los objetos en nuestro universo.</p>
+        </header>
+
+        <main class="space-y-8">
+
+            <section id="ley1" class="bg-[#0f4c75]/50 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 border border-white/10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white mb-4">1. Ley de la <span class="text-[#ffa600]">Inercia</span></h2>
+                        <p class="mb-4 text-gray-300">Un objeto en reposo permanece en reposo y un objeto en movimiento permanece en movimiento con la misma velocidad y en la misma dirección, a menos que una fuerza externa actúe sobre él.</p>
+                        <p class="font-bold text-white">En resumen: los objetos se resisten a cambiar su estado de movimiento.</p>
+                    </div>
+                    <div class="bg-gray-900/30 p-6 rounded-lg">
+                        <h3 class="text-center font-bold text-white mb-4">Ejemplo Visual: Frenazo Brusco</h3>
+                        <div class="relative h-24 bg-gray-700 rounded-lg flex items-center justify-center p-2">
+                            <div class="text-center text-white font-bold">🚗 Coche</div>
+                             <div class="absolute h-10 w-6 bg-[#ef5675] rounded flex items-center justify-center text-white text-sm font-bold animate-pulse">🧍</div>
+                        </div>
+                        <p class="text-center mt-4 text-sm text-gray-400">Al frenar el coche, la <span class="font-bold text-[#ef5675]">inercia</span> hace que tu cuerpo tienda a seguir moviéndose hacia adelante.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ley2" class="bg-[#0f4c75]/50 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 border border-white/10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="md:order-2">
+                        <h2 class="text-4xl font-bold text-white mb-4">2. Ley de la <span class="text-[#ffa600]">Dinámica</span></h2>
+                        <p class="text-2xl font-bold text-center bg-gray-900/30 p-4 rounded-lg text-[#ffa600] mb-4">F = m × a</p>
+                        <p class="mb-4 text-gray-300">La aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa.</p>
+                        <p class="font-bold text-white">En resumen: para mover más masa, necesitas más fuerza.</p>
+                    </div>
+                    <div class="md:order-1">
+                        <h3 class="text-center font-bold text-white mb-4">Comparación de Fuerza Requerida</h3>
+                        <div class="chart-container">
+                            <canvas id="fuerzaMasaChart"></canvas>
+                        </div>
+                        <p class="text-center mt-4 text-sm text-gray-400">Se necesita más <span class="font-bold text-[#ef5675]">fuerza</span> para empujar un carrito lleno y lograr la misma aceleración que uno vacío.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ley3" class="bg-[#0f4c75]/50 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 border border-white/10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-white mb-4">3. Ley de <span class="text-[#ffa600]">Acción y Reacción</span></h2>
+                        <p class="mb-4 text-gray-300">Para cada acción, existe una reacción igual y opuesta. Las fuerzas siempre ocurren en pares.</p>
+                         <p class="font-bold text-white">En resumen: si empujas algo, ese algo te empuja de vuelta con la misma intensidad.</p>
+                    </div>
+                     <div class="bg-gray-900/30 p-6 rounded-lg">
+                        <h3 class="text-center font-bold text-white mb-4">Ejemplo Visual: Salto</h3>
+                        <div class="flex flex-col items-center justify-center space-y-8 my-4">
+                             <div class="force-arrow arrow-up">
+                                <span class="text-lg font-bold text-[#ffa600]">REACCIÓN</span>
+                                <p class="text-sm text-gray-300">El suelo te impulsa hacia arriba</p>
+                            </div>
+                            <div class="text-5xl">🧍</div>
+                            <div class="force-arrow arrow-down">
+                                <span class="text-lg font-bold text-[#ef5675]">ACCIÓN</span>
+                                <p class="text-sm text-gray-300">Empujas el suelo hacia abajo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center mt-12 pt-8 border-t border-white/10">
+                 <h2 class="text-3xl font-bold text-white mb-4">Fundamentos del Universo Físico</h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-300">Desde la órbita de los planetas hasta la ingeniería de un puente, estas tres simples leyes son la base para comprender y predecir el movimiento en nuestro mundo.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        function wrapLabel(str, max_width) {
+            if (str.length <= max_width) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let current_line = '';
+            words.forEach(word => {
+                if ((current_line + ' ' + word).trim().length > max_width && current_line.length > 0) {
+                    lines.push(current_line);
+                    current_line = word;
+                } else {
+                    current_line = (current_line + ' ' + word).trim();
+                }
+            });
+            if (current_line.length > 0) {
+                lines.push(current_line);
+            }
+            return lines;
+        }
+
+        const ctx = document.getElementById('fuerzaMasaChart').getContext('2d');
+        const fuerzaMasaChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Carrito de Supermercado Vacío', 'Carrito de Supermercado Lleno'].map(label => wrapLabel(label, 16)),
+                datasets: [{
+                    label: 'Fuerza Requerida (en Newtons)',
+                    data: [20, 100],
+                    backgroundColor: [
+                        'rgba(239, 86, 117, 0.7)',
+                        'rgba(122, 81, 149, 0.7)'
+                    ],
+                    borderColor: [
+                        '#ef5675',
+                        '#7a5195'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#e5e7eb'
+                        }
+                    },
+                    x: {
+                         grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#e5e7eb'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: '#003f5c',
+                        titleColor: '#ffa600',
+                        bodyColor: '#e5e7eb',
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
